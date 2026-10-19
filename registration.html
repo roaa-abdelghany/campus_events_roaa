@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Register for a campus event." />
+    <title>CampusEvents | Registration</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <input
+      type="checkbox"
+      id="theme-toggle"
+      class="theme-checkbox"
+      aria-label="Enable dark mode"
+    />
+    <div class="site-wrapper">
+      <header class="site-header">
+        <a class="site-logo" href="index.html">Campus<span>Events</span></a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a><a href="events.html">Events</a
+          ><a href="event-details.html">Event Details</a
+          ><a href="schedule.html">Schedule</a
+          ><a href="registration.html" aria-current="page">Register</a>
+        </nav>
+        <label for="theme-toggle" class="theme-label">☾ Dark mode</label>
+      </header>
+      <main>
+        <section class="page-hero">
+          <p class="eyebrow">Be part of the experience</p>
+          <h1>Event registration</h1>
+          <p>
+            Fill in the form below to register your interest in a campus event.
+          </p>
+        </section>
+        <section class="section registration-layout">
+          <aside class="registration-intro">
+            <h2>Join a campus event</h2>
+            <p>
+              Share a few details and choose the event you would like to attend.
+              Fields marked with an asterisk are required.
+            </p>
+            <div class="note-panel">
+              <strong>Before you submit</strong>
+              <p>
+                Check that your email is correct and select your preferred event
+                date.
+              </p>
+            </div>
+          </aside>
+          <form
+            class="registration-form"
+            action="#"
+            method="get"
+            enctype="multipart/form-data"
+          >
+            <fieldset>
+              <legend>Personal information</legend>
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="full-name">Full name *</label
+                  ><input
+                    id="full-name"
+                    name="full-name"
+                    type="text"
+                    placeholder="Your full name"
+                    autocomplete="name"
+                    required
+                    minlength="2"
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="email">Email address *</label
+                  ><input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="portfolio">Portfolio or website</label
+                  ><input
+                    id="portfolio"
+                    name="portfolio"
+                    type="url"
+                    placeholder="https://example.com"
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="age">Age</label
+                  ><input
+                    id="age"
+                    name="age"
+                    type="number"
+                    min="16"
+                    max="100"
+                    placeholder="Your age"
+                  />
+                </div>
+                <div class="form-field full-width">
+                  <label for="interest"
+                    >How interested are you in campus events?
+                    <output>Choose 1–10</output></label
+                  ><input
+                    id="interest"
+                    name="interest"
+                    type="range"
+                    min="1"
+                    max="10"
+                    value="7"
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="preferred-date">Preferred attendance date *</label
+                  ><input
+                    id="preferred-date"
+                    name="preferred-date"
+                    type="date"
+                    min="2026-10-19"
+                    max="2026-12-31"
+                    required
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="arrival-time">Preferred arrival time</label
+                  ><input id="arrival-time" name="arrival-time" type="time" />
+                </div>
+                <div class="form-field">
+                  <label for="favorite-color">Choose an accent color</label
+                  ><input
+                    id="favorite-color"
+                    name="favorite-color"
+                    type="color"
+                    value="#3f8279"
+                  />
+                </div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Event preferences</legend>
+              <div class="form-field">
+                <label for="event-choice">Choose an event *</label
+                ><select id="event-choice" name="event-choice" required>
+                  <option value="">Select an event</option>
+                  <option value="innovation-day">
+                    Campus Innovation Day — November 12
+                  </option>
+                  <option value="coding-workshop">
+                    Coding Workshop — November 15
+                  </option>
+                  <option value="sports-day">
+                    Campus Sports Day — November 20
+                  </option>
+                </select>
+              </div>
+              <p class="group-label">How would you like to attend?</p>
+              <div class="choice-row">
+                <label class="choice"
+                  ><input
+                    type="radio"
+                    name="attendance"
+                    value="in-person"
+                    required
+                  />
+                  In person</label
+                ><label class="choice"
+                  ><input type="radio" name="attendance" value="online" />
+                  Online, if available</label
+                >
+              </div>
+              <div class="form-field">
+                <label for="notes">Additional notes</label
+                ><textarea
+                  id="notes"
+                  name="notes"
+                  rows="4"
+                  placeholder="Accessibility requests, questions, or anything else..."
+                ></textarea>
+              </div>
+              <div class="form-field">
+                <label for="attachment">Upload a file (optional)</label
+                ><input
+                  id="attachment"
+                  name="attachment"
+                  type="file"
+                  accept=".pdf,.jpg,.jpeg,.png"
+                />
+              </div>
+              <label class="choice consent"
+                ><input type="checkbox" name="consent" required /> I confirm
+                that the information provided is correct and agree to be
+                contacted about this event. *</label
+              >
+            </fieldset>
+            <button class="button button-full" type="submit">
+              Submit registration →
+            </button>
+            <p class="form-help">
+              This is a front-end demo. The form uses browser validation but
+              does not store or send submissions.
+            </p>
+          </form>
+        </section>
+      </main>
+      <footer class="site-footer">
+        <a class="site-logo footer-logo" href="index.html"
+          >Campus<span>Events</span></a
+        >
+        <p>Better events. A brighter campus.</p>
+        <div class="social-links">
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          ><a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Instagram</a
+          ><a
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Facebook</a
+          >
+        </div>
+        <p class="copyright">© 2026 CampusEvents. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>
